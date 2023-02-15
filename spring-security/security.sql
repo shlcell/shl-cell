@@ -37,7 +37,7 @@ CREATE TABLE `sys_menu` (
   `del_flag` int(11) DEFAULT '0' COMMENT '是否删除（0未删除 1已删除）',
   `remark` varchar(500) DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COMMENT='菜单表';
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COMMENT='菜单表';
 
 /*Data for the table `sys_menu` */
 
