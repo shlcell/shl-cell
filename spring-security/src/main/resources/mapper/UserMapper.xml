@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shl.demo.mapper.UserMapper">
+
+    <update id="saveOrUpdate">
+        insert into sys_user
+            (user_name, nick_name, email)
+        values (#{user.userName}, #{user.nickName}, #{user.email}) on duplicate key
+        update
+            email=#{user.email},
+            user_name=#{user.userName}
+    </update>
+
+
+    <update id="saveOrUpdateBatch">
+        insert into sys_user (user_name, nick_name, email)
+        values
+        <foreach collection="userList" item="user" separator=','>
+            (#{user.userName}, #{user.nickName}, #{user.email})
+        </foreach>
+        ON DUPLICATE KEY UPDATE
+        email=values(email),
+        user_name=values(user_name)
+    </update>
+
+
+    <update id="sddsds">
+        INSERT INTO sys_user (org_code, user_id, user_name,user_status,deleted)
+        VALUES
+        <foreach collection="userList" item="user" separator=','>
+            (#{user.orgCode}, #{user.userId}, #{user.userName},#{user.userStatus},#{user.deleted})
+        </foreach>
+        ON DUPLICATE KEY UPDATE
+        user_name=VALUE(user_name),
+        user_status=VALUE(user_status),
+        deleted=VALUE(deleted)
+    </update>
+</mapper>

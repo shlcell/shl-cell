@@ -1,0 +1,22 @@
+server:
+  port: 8888
+
+spring:
+  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.91.129:3306/security?useSSL=false&useUnicode=true&characterEncoding=UTF-8&rewriteBatchedStatements=true
+    username: root
+    password: root
+  redis:
+    host: 192.168.91.129
+    port: 6379
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+
+org-info:
+  list:
+    - orgCode: hx
+      ip : www.hx.com
+    - orgCode: al
+      ip : www.al.com
