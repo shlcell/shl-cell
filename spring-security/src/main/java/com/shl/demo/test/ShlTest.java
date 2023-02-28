@@ -6,10 +6,14 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class ShlTest {
+    Runnable r1 = () -> {
+        System.out.println("fdsfds");
+    };
+
     public static void main(String[] args) {
         List<Object> listName1 = new ArrayList<>();
         List<Object> listName2 = new ArrayList<>();
-
+        new ShlTest().r1.run();
         listName1.add(1);
         listName1.add(2);
         listName1.add(3);
@@ -25,5 +29,11 @@ public class ShlTest {
         System.out.println(listName2.size());
         System.out.println(listName2.get(0));
         System.out.println(listName2);
+        System.out.println("-------------------------------");
+        int x = 1;
+        for (int i = 0; i < 5; i++) {
+            x = x + i;
+        }
+        System.out.println(x);
     }
 }
