@@ -1,0 +1,22 @@
+server:
+  port: 8005
+
+spring:
+  application:
+    name: test-other
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: localhost:8848
+
+# 获取配置文件中的list集合
+blacklist:
+  sqlBlacklist:
+    - create
+    - alter
+    - drop
+#  databaseBlackList:
+#    - xxfp
+#    - xxfp_mx
+#    - xxfp_xhqd
+  databaseBlackList: xxfp,xxfp_mx,xxfp_xhqd
