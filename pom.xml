@@ -6,6 +6,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>spring-security</module>
+        <module>test-other</module>
     </modules>
 
     <parent>
