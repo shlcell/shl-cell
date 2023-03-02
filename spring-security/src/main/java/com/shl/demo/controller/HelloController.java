@@ -1,13 +1,9 @@
 package com.shl.demo.controller;
 
 import com.shl.demo.config.OrgConfig;
-import com.shl.demo.domain.OrgInfo;
 import com.shl.demo.domain.ResponseResult;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.transaction.support.TransactionSynchronizationManager;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

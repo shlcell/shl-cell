@@ -17,7 +17,7 @@ public class ShlTest {
         listName1.add(1);
         listName1.add(2);
         listName1.add(3);
-
+        System.out.println(Math.sqrt(9));
         listName2.add("x");
         listName2.add("y");
         listName2.add("z");

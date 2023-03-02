@@ -1,6 +1,5 @@
 package com.shl.demo.test;
 
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.shl.demo.domain.User;
 import com.shl.demo.mapper.UserMapper;

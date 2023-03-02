@@ -1,13 +1,10 @@
 package com.shl.demo.filter;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.shl.demo.domain.LoginUser;
-import com.shl.demo.domain.User;
 import com.shl.demo.mapper.MenuMapper;
 import com.shl.demo.mapper.UserMapper;
 import com.shl.demo.utils.JwtUtil;
 import com.shl.demo.utils.RedisCache;
-import io.jsonwebtoken.Jwts;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +19,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 import java.util.Objects;
 
 @Component

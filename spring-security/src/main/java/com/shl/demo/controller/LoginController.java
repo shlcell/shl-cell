@@ -1,6 +1,5 @@
 package com.shl.demo.controller;
 
-import com.shl.demo.annoation.OpLog;
 import com.shl.demo.domain.ResponseResult;
 import com.shl.demo.domain.User;
 import com.shl.demo.service.LoginServcie;

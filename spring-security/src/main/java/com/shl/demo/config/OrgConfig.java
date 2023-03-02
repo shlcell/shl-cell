@@ -1,6 +1,5 @@
 package com.shl.demo.config;
 
-import com.shl.demo.domain.OrgInfo;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
