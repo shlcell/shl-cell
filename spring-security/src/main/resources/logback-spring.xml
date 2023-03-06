@@ -11,6 +11,7 @@
 
     <timestamp key="datetime" datePattern="yyyy-MM-dd"/>
 
+    <!-- name的值是变量的名称，value的值时变量定义的值。通过定义的值会被插入到logger上下文中。定义变量后，可以使“${}”来使用变量。 -->
     <springProperty scope="context" name="log.path" source="logging.file.path"/>
 
 
@@ -42,10 +43,16 @@
             <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
             <charset>UTF-8</charset> <!-- 此处设置字符集 -->
         </encoder>
+        <!-- 每天日志归档路径以及格式,编码器 -->
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
             <fileNamePattern>${log.path}/sysLog-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <!--每个文件最多100MB-->
             <maxFileSize>100MB</maxFileSize>
-            <maxHistory>1</maxHistory>
+            <!--日志文件保留天数-->
+            <maxHistory>15</maxHistory>
+            <!--每个文件最多100MB，保留15天的历史记录，但最多2GB-->
+            <totalSizeCap>2GB</totalSizeCap>
+            <!--重启清理日志文件-->
             <cleanHistoryOnStart>true</cleanHistoryOnStart>
         </rollingPolicy>
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
