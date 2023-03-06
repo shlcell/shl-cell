@@ -20,3 +20,7 @@ org-info:
       ip : www.hx.com
     - orgCode: al
       ip : www.al.com
+
+logging:
+  file:
+    path: files/logs
