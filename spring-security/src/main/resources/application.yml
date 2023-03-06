@@ -23,4 +23,4 @@ org-info:
 
 logging:
   file:
-    path: files/logs
+    path: files/logback
