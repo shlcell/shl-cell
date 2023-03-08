@@ -7,6 +7,9 @@ import java.sql.*;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * jdbc连接 测试控制器
+ */
 @RestController
 public class TestJdbcController {
 
