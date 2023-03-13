@@ -116,6 +116,7 @@
             </releases>
         </repository>
     </repositories>
+
     <pluginRepositories>
         <pluginRepository>
             <id>maven-public</id>
@@ -130,9 +131,14 @@
         </pluginRepository>
     </pluginRepositories>
 
-
     <!--项目分发信息，在执行mvn deploy后表示要发布的位置。有了这些信息就可以把网站部署到远程服务器或者把构件jar等部署到远程仓库。 -->
     <distributionManagement>
+        <!--正式版本存储位置-->
+        <repository>
+            <!-- nexus服务器中用户名：在settings.xml中<server>的id-->
+            <id>maven-releases</id>
+            <url>http://192.168.91.130:8081/repository/maven-releases/</url>
+        </repository>
         <!--构件的快照部署到哪里？如果没有配置该元素，默认部署到repository元素配置的仓库，参见distributionManagement/repository元素 -->
         <snapshotRepository>
             <id>maven-public</id>
