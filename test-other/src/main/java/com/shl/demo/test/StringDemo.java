@@ -13,5 +13,9 @@ public class StringDemo {
             arrayList.add(value.toUpperCase());
         }
         System.out.println(arrayList);
+        String loanType = "1";
+        if (1==Integer.parseInt(loanType)  ) {
+            System.out.println("1");
+        }
     }
 }
