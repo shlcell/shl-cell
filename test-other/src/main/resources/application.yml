@@ -20,3 +20,7 @@ blacklist:
 #    - xxfp_mx
 #    - xxfp_xhqd
   databaseBlackList: xxfp,xxfp_mx,xxfp_xhqd
+
+#Scheduled定时设置，从前到后依次为 秒 分 时 日 月 周 其中？表示不关心周
+#每5分钟间隔
+deleteTime: 0 /5 * * * ?
