@@ -8,7 +8,9 @@ import java.util.List;
 public class ListTest {
     public static void main(String[] args) {
         List<Object> list = new ArrayList<>();
-        list.add(getObject(list));
+//        list.add(null);
+        list.add("1");
+//        list.add(getObject(list));
         System.out.println(list.size());
 
     }

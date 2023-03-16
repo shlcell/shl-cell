@@ -44,6 +44,7 @@ public class SecurityConfig {
                 // anonymous允许匿名访问（登录认证之后就不能访问）
 //            .antMatchers("/hello").hasAuthority("select")
                 .antMatchers("/kaptcha/**").permitAll()
+                .antMatchers("/test/**").permitAll()
                 .antMatchers("/hello/**").hasRole("ADMIN")
                 .antMatchers("/xxx/**").hasRole("USER")
                 .antMatchers("/user/login").anonymous()
