@@ -8,6 +8,8 @@ import java.util.HashMap;
 public class DateTest {
     public static void main(String[] args) throws ParseException {
         Date date = new Date();
+
+        System.out.println(date);
         HashMap<Object, Object> map = new HashMap<>();
         String s = date.toString();
         String format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(Long.parseLong("1678863452000")));
