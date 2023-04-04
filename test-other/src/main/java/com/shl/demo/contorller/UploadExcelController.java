@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class uploadExcelController {
+public class UploadExcelController {
 
     @PostMapping("/upload")
     public String uploadExcel(@RequestParam("file") MultipartFile file) {
