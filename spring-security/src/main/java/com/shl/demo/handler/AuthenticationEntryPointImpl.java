@@ -1,4 +1,4 @@
-package com.shl.demo.handle;
+package com.shl.demo.handler;
 
 import com.alibaba.fastjson.JSON;
 import com.shl.demo.domain.ResponseResult;
