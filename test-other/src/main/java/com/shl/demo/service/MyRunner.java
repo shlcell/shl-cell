@@ -20,4 +20,3 @@ public class MyRunner implements CommandLineRunner {
         // 这里编写应用程序启动后需要执行的代码逻辑
     }
 }
-
