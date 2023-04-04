@@ -11,8 +11,13 @@ import org.springframework.web.bind.annotation.*;
 import java.lang.reflect.Method;
 import java.util.Map;
 
+/*获取Spring容器中所有被@RestController或@Controller注解标记的Bean，
+并分别获取其中被@RequestMapping标记的类和方法，进而获取到接口的url和请求方式等信息。
+之后，我们使用JdbcTemplate来操作数据库，将所有接口信息保存到MySQL数据库中。
+使用时，只需要调用ApiService.saveAllApiInfos()方法即可*/
 @Service
 public class ApiService {
+
 //    @Autowired
 //    private DataSource dataSource;
     @Autowired
