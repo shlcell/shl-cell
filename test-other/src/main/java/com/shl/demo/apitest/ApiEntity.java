@@ -1,4 +1,4 @@
-package com.shl.demo.entity;
+package com.shl.demo.apitest;
 
 import lombok.Data;
 

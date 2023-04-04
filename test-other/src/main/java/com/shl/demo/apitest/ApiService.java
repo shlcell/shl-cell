@@ -1,6 +1,6 @@
-package com.shl.demo.service;
+package com.shl.demo.apitest;
 
-import com.shl.demo.entity.ApiEntity;
+import com.shl.demo.apitest.ApiEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.annotation.AnnotationUtils;
