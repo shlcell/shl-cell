@@ -32,7 +32,8 @@ public class ImageUploadService {
         }
 
         BufferedImage image = ImageIO.read(file.getInputStream());
-        if (image == null) { // 不是有效的图像
+        // 不是有效的图像
+        if (image == null) {
             return false;
         }
 
