@@ -2,6 +2,8 @@ package com.shl.demo.domain;
 
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 @Data
 public class GpuInfo {
 
@@ -12,7 +14,7 @@ public class GpuInfo {
     private String name;
 
     //总内存
-    private String totalMemory;
+    private LocalDateTime totalMemory;
 
     //使用内存
     private String usedMemory;
