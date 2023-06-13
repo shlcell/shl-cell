@@ -14,8 +14,21 @@ public class StringDemo {
         }
         System.out.println(arrayList);
         String loanType = "1";
-        if (1==Integer.parseInt(loanType)  ) {
+        if (1 == Integer.parseInt(loanType)) {
             System.out.println("1");
         }
+
+        String str = "a,b,c,,";
+        String[] ary = str.split(",");
+        //预期大于 3，结果是 3
+        System.out.println(ary.length);
+
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("A");
+        list.add("B");
+        list.add("C");
+        Object[] objects = list.toArray();
+        String[] array = list.toArray(new String[2]);
+        System.out.println("-----------------");
     }
 }
