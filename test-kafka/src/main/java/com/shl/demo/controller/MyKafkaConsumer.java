@@ -1,26 +1,21 @@
-package com.shl.kafka.controller;
+package com.shl.demo.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.joda.time.DateTime;
-import org.joda.time.DateTimeUtils;
 import org.springframework.kafka.annotation.KafkaListener;
-import org.springframework.kafka.support.Acknowledgment;
-import org.springframework.kafka.support.KafkaHeaders;
-import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;
 
 @Slf4j
 @Component
-public class KafkaConsumer {
+public class MyKafkaConsumer {
 
-    @KafkaListener(topics = KafkaProducer.TOPIC_TEST)
+    @KafkaListener(topics = MyKafkaProducer.TOPIC_TEST)
     public void consumerGroup(ConsumerRecord<?, ?> record) {
         Optional<?> message = Optional.ofNullable(record.value());
         if (message.isPresent()) {
-//            log.info("接收数据Message--{}",message);
+            log.info("接收数据Message--{}", message);
         }
 
     }

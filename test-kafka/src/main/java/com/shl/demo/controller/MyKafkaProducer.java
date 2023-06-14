@@ -1,4 +1,4 @@
-package com.shl.kafka.controller;
+package com.shl.demo.controller;
 
 import com.shl.kafka.service.StudentService;
 import lombok.extern.slf4j.Slf4j;
@@ -17,7 +17,7 @@ import java.util.List;
 
 @Slf4j
 @RestController
-public class KafkaProducer {
+public class MyKafkaProducer {
 
     @Autowired
     private KafkaTemplate<Object, Object> kafkaTemplate;
