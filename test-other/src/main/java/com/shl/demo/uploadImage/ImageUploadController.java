@@ -8,6 +8,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 @RestController
 public class ImageUploadController {
@@ -73,5 +75,21 @@ public class ImageUploadController {
     @PostMapping("/validate")
     public boolean getImage(@RequestParam("base64Image") String base64Image) {
         return imageUploadService.validate(base64Image);
+    }
+
+
+    public static void main(String[] args) {
+        // 将图片文件转化为16进制返回
+        String imagePath = "C:\\Users\\Lenovo\\Desktop\\3.png";
+        try {
+            byte[] imageData = Files.readAllBytes(Paths.get(imagePath));
+            StringBuilder sb = new StringBuilder();
+            for (byte b : imageData) {
+                sb.append(String.format("%02X", b));
+            }
+            System.out.println(sb);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
