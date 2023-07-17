@@ -80,7 +80,7 @@ public class ImageUploadController {
 
     public static void main(String[] args) {
         // 将图片文件转化为16进制返回
-        String imagePath = "C:\\Users\\Lenovo\\Desktop\\3.png";
+        String imagePath = "C:\\Users\\Lenovo\\Desktop\\微信图片_20230706100028.png";
         try {
             byte[] imageData = Files.readAllBytes(Paths.get(imagePath));
             StringBuilder sb = new StringBuilder();
