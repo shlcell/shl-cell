@@ -1,0 +1,9 @@
+解析json字符串：
+序列化：java对象转化为json
+反序列化：json转化为java
+
+序列化库
+gson  Google出的
+fastjson 阿里出品 快，但是漏洞太多
+Jackson
+kryo

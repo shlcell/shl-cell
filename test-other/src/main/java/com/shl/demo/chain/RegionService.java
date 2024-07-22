@@ -15,10 +15,13 @@ public class RegionService {
 //        list.add("120000");
 //        list.add("120100");
 //        list.add("120101");
-//        list.add("130000");
+        list.add("130000");
 //        list.add("130100");
-//        list.add("130102");
-        list.add("150102");
+        list.add("130102");
+        list.add("510000");
+        list.add("13990000");
+        list.add("51019900");
+        list.add("51149900");
 
         Set<String> largestRegion = findLargestRegion(list);
         System.out.println(largestRegion);
