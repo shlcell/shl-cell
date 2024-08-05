@@ -1,10 +1,10 @@
 package com.shl.demo.controller;
 
-import com.shl.kafka.service.StudentService;
+import com.shl.demo.entity.Student;
+import com.shl.demo.service.StudentService;
 import lombok.extern.slf4j.Slf4j;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.SendResult;
 import org.springframework.lang.Nullable;
@@ -12,34 +12,36 @@ import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.util.concurrent.ListenableFutureCallback;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Iterator;
+import javax.annotation.Resource;
 import java.util.List;
 
 @Slf4j
 @RestController
 public class MyKafkaProducer {
 
-    @Autowired
+    @Resource
     private KafkaTemplate<Object, Object> kafkaTemplate;
 
-    @Autowired
+    @Resource
     private StudentService service;
 
-    public static final String TOPIC_TEST = "test03lz4";
+    public static final String TOPIC_TEST = "test";
 
-    // kafka推送消息
+    /**
+     * kafka推送消息
+     */
     @RequestMapping("/pushStudent")
     public void pushMessage() {
-        List list = service.createD();
+        List<Student> list = service.createD();
         long start = DateTimeUtils.currentTimeMillis();
-        Iterator iterator = list.iterator();
-        while (iterator.hasNext()) {
-            ListenableFuture<SendResult<Object, Object>> send = kafkaTemplate.send(TOPIC_TEST, iterator.next().toString());
+        for (Student student : list) {
+            ListenableFuture<SendResult<Object, Object>> send = kafkaTemplate.send(TOPIC_TEST, student.toString());
             send.addCallback(new ListenableFutureCallback<SendResult<Object, Object>>() {
                 @Override
                 public void onFailure(Throwable throwable) {
                     log.error(TOPIC_TEST + "-生产者发送消息失败" + throwable.getMessage());
                 }
+
                 @Override
                 public void onSuccess(@Nullable SendResult<Object, Object> stringObjectSendResult) {
                     // log.info(TOPIC_TEST + "-生产者发送消息成功" + stringObjectSendResult.toString());
@@ -50,7 +52,9 @@ public class MyKafkaProducer {
         log.info("发送时间消耗{}", end - start);
     }
 
-    // kafka推送消息
+    /**
+     * kafka推送消息
+     */
     @PostMapping(value = "/pushMessage/{message}")
     public void pushMessage(@PathVariable String message) {
         DateTime timeS = new DateTime();

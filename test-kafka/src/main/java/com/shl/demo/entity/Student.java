@@ -1,5 +1,4 @@
-package com.shl.kafka.entity;
-
+package com.shl.demo.entity;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

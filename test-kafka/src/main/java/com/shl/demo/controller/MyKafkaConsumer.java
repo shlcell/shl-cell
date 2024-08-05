@@ -17,7 +17,6 @@ public class MyKafkaConsumer {
         if (message.isPresent()) {
             log.info("接收数据Message--{}", message);
         }
-
     }
 
 //    @KafkaListener(topics = KafkaProducer.TOPIC_TEST)
