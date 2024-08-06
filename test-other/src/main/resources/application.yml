@@ -24,3 +24,8 @@ blacklist:
 #Scheduled定时设置，从前到后依次为 秒 分 时 日 月 周 其中？表示不关心周
 #每5分钟间隔
 deleteTime: 0 /5 * * * ?
+
+suggest:
+  requirement:
+    handler1: com.study.design.handler.PersonnalCheckHandler,com.study.design.handler.CityCheckHandler,com.study.design.handler.RecentCheckHandler,com.study.design.handler.NewCheckHandler
+    handler2: com.study.design.handler.PersonnalCheckHandler,com.study.design.handler.CityCheckHandler,com.study.design.handler.RecentCheckHandler,com.study.design.handler.NewCheckHandler
