@@ -1,5 +1,6 @@
 package com.shl.demo.contorller;
 
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -36,7 +37,7 @@ public class UploadExcelController {
 //            myService.saveDataList(dataList);
 
             return "上传成功";
-        } catch (IOException e) {
+        } catch (IOException | InvalidFormatException e) {
             e.printStackTrace();
             return "上传失败";
         }

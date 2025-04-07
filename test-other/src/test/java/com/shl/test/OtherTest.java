@@ -1,5 +1,6 @@
 package com.shl.test;
 
+import cn.hutool.core.util.NumberUtil;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -54,6 +55,16 @@ public class OtherTest {
     public void shl() {
         int[] nums = new int[]{2, 7, 11, 15};
         int[] ints = this.twoSum(nums, 13);
+    }
+
+    @Test
+    public void sh1l() {
+        int sampleTotal = 51;
+        int cybfb = 0;
+        int sampleSize = (int) (sampleTotal * ((double) cybfb / 100));
+        int sampleSize1 = (int) NumberUtil.div(sampleTotal * cybfb, 100);
+        System.out.println(sampleSize);
+        System.out.println(sampleSize1);
     }
 
 }
